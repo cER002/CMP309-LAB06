@@ -1,8 +1,8 @@
 function Post({title, body}) {
     return (
-        <div>
-            <h3>{title}</h3>
-            <p>{body}</p>
+        <div className="post-card">
+            <h3 className="post-title">{title}</h3>
+            <p className="post-body">{body}</p>
         </div>
     )
 }
