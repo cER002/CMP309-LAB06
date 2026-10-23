@@ -1,11 +1,11 @@
 function postReducer(state, action) {
     switch (action.type) {
         case 'FETCH_START':
-            return { ...state, status: 'loading' };
+            return { ...state, loading: true };
         case 'FETCH_SUCCESS':
-            return { ...state, status: 'success', data: action.payload };
+            return { ...state, loading: false, posts: action.payload };
         case 'FETCH_ERROR':
-            return { ...state, status: 'error', data: action.payload };
+            return { ...state, loading: false, error: action.payload };
         default:
             return state
     }
