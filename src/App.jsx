@@ -31,7 +31,7 @@ function App() {
     <>
       <FilterForm filterValue={filterValue} setFilterValue={setFilterValue} />
       {postsState.loading && <p className='loading-message'>Loading...</p>}
-      {postsState.error && <p className='fail-message'>Fetch failed!</p>}
+      {postsState.error && <p className='fail-message'>Fetch failed! {postsState.error}</p>}
       {!postsState.loading && !postsState.error && posts.length === 0 && <p className='notfound-message'>No posts found</p>}
       {!postsState.loading && !postsState.error && posts.length > 0 && <PostList posts={posts} />}
     </>
